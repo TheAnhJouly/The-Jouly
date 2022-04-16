@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Siblings - cac thanh phan anh em</title>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<style>
+		section *{
+             border : 1px solid #ccc;
+             padding: 10px;
+             margin: 10px;
+             display: block;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div> div
+			<ul> ul
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+				<p>Thẻ p</p>
+				<h1>Thẻ h1</h1>
+				<h3>Thẻ h3</h3>
+				<h5>Thẻ h5</h5>
+			</ul>
+		</div>	
+	</section>
+	<script>
+		$(document).ready(function(){
+			//vd1 .1 goi cac anh em cung 1 hang
+            //$('p').siblings().css({"border-color":'red'});
+            //vd1 .2 goi cac anh em cung 1 hang nhung la 1 gia tri cu the (tuc la goi cac anh em cung 1 ten)
+            //$('p').siblings('li').css({"border-color":'red'});
+            //vd2.1 goi ra 1 ng phia sau ptu da chon
+            //$('p').next().css({"border-color":'red'});
+            //vd2.2 goi tat ca anh em o sau ptu da chon
+            //$('p').nextAll().css({"border-color":'red'});
+            //vd2.3 lay ra cac anh em o trong 2 phan tu dau va cuoi
+            $('p').nextUntil('h5').css({"border-color":'red'});
+            //vd3 prev(), prevAll(), prevUntil() (nhu vd2)
+            $('p').prev().css({"border-color":'blue'});
+			});
+	</script>
+</body>
+</html>
+<!-- Jquery Traversing - Ancestors - cac thanh phan cha, ong
+Jquery Traversing - Descendants - cac thanh phan con truc tiep
+Jquery Traversing - Siblings - cac thanh phan anh em
+Jquery Traversing - Filtering - chi dinh cac thanh phan cu the thong qua moi quan he (chon 1 ong ngau nhien) -->

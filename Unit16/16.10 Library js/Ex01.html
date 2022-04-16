@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+	<h3 class="animate__animated animate__flip">Hiệu ứng flip</h3>
+	<form method="get" accept-charset="utf-8" id="formDemo">
+ 	<fieldset>
+ 		<legend>ZentGroup</legend><br>
+ 		<div>
+		<label>Họ<span class="red">(*)</span>:</label><br>
+		<input name="ho" type="text" placeholder="Vui lòng nhập họ" required>
+ 	</div>
+ 	<div>
+	 <label>Tên<span class="red">(*)</span>:</label><br>
+	 <input name="ten" type="text" placeholder="Vui lòng nhập tên" required>
+ 	</div>
+ 	<div>
+		<label>Địa chỉ<span class="red">(*)</span>:</label><br>
+		<input name="diachi" type="text" placeholder="Vui lòng nhập địa chỉ"></div>
+ 	<button type="submit">Gửi</button>
+ 	</fieldset>
+ </form>
+
+	<script>
+		$(document).ready(function(){
+		$("#formDemo").validate({
+		 rules: { //luat dua ra 
+		 	ho: "required", //required = bat buoc dien vao
+		 	ten: "required",
+		 	diachi: { //2 luat tro len thi ghi trong rule {}
+				required: true,
+		 		minlength: 2
+		 	}
+		},
+		messages: { //tin nhan hien thi cho ng dung
+		 	ho: "Vui lòng nhập họ",
+		 	ten: "Vui lòng nhập tên",
+		 	diachi: {
+		 		required: "Vui lòng nhập địa chỉ",
+				minlength: "Địa chỉ quá ngắn"
+		 		}
+			 }
+		 });
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ancestors - cha, ông </title>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<style>
+		section *{
+             border : 1px solid #ccc;
+             padding: 10px;
+             margin: 10px;
+             display: block;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div> div
+			<ul> ul
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+			</ul>
+		</div>	
+	</section>
+	<script>
+		$(document).ready(function(){
+			// vd1 lay ra cha truc tiep
+			//$('ul').parent().css({'border-color':'red'});
+			//vd2 lay ra cac to tien (cac ong cha )
+			$('span').parents('div').css({'border-color':'red'});
+			//vd3 lay ra cac to tien (cac ong cha ) [nam trong khoang tu ptu dc chon den doi so truyen vao ham parentsUntil ] (ptu va cac doi so o dau 2 ben k dc tinh)
+			$('span').parentsUntil('div').css({'border-color':'red'});
+			});
+	</script>
+</body>
+</html>
+
+<!-- Jquery Traversing - Ancestors - cac thanh phan cha, ong
+Jquery Traversing - Descendants - cac thanh phan con truc tiep
+Jquery Traversing - Siblings - cac thanh phan anh em
+Jquery Traversing - Filtering - chi dinh cac thanh phan cu the thong qua moi quan he (chon 1 ong ngau nhien) -->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Velit, aspernatur!</p>
+
+	<button>SlideDown</button>
+	<button>SlideUp</button>
+	<button>SlideToggle</button>
+		<script>
+		$(document).ready(function(){
+			$('button').eq(0).on('click' , function(){
+				$('p').slideDown(3000);
+			})
+			$('button').eq(1).on('click' , function(){
+				$('p').slideUp(3000);
+			})
+			$('button').eq(2).on('click' , function(){
+				$('p').slideToggle(3000);
+			})
+		});
+	</script>
+</body>
+</html>
+<!-- 	
+slideDown() Hiển thị Element bằng cách tăng chiều cao
+
+slideUp() Ẩn Element bằng cách giảm chiều cao
+
+slideToggle() Chuyển đổi trạng thái ẩn/ hiện Element  
+-->

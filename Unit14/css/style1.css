@@ -1,0 +1,52 @@
+.container{
+	background-color: red;
+}
+.wrap{
+	text-align: center;
+	padding: 25px;
+}
+
+.wrap p{
+	font-size: 25px;
+	color: white;
+}
+ 
+.input{
+	display: flex;
+}
+.input input{
+	width: 100%;
+	height: 25px
+}
+input:focus{
+	outline: 0;
+}
+.add{
+	background-color: gray;
+	text-align: center;
+	width: 20%;
+}
+.newWrap{
+	display: flex;
+	background-color: lightgray;
+	color: black;
+	font-size: 20px;
+}
+.new{
+	width: 95%;
+	padding: 15px 5px;
+}
+.x{
+	padding: 15px;
+	cursor: pointer;
+}
+.check{
+	text-decoration-line: line-through;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+	padding: 15px 5px;
+}

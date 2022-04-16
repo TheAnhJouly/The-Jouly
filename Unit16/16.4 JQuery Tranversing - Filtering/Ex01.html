@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Filtering - chi dinh cac thanh phan cu the thong qua moi quan he (chon 1 ong ngau nhien)</title>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<style>
+		section *{
+             border : 1px solid #ccc;
+             padding: 10px;
+             margin: 10px;
+             display: block;
+		}
+	</style>
+</head>
+<body>
+		<section>
+		<div> div
+			<ul> ul
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+				<li class="test"> li
+					<span>Thẻ span</span>
+				</li>
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+				<li> li
+					<span>Thẻ span</span>
+				</li>
+				<p>Thẻ p</p>
+				<h1>Thẻ h1</h1>
+				<h3>Thẻ h3</h3>
+				<h5>Thẻ h5</h5>
+			</ul>
+		</div>	
+	</section>
+	<script>
+		$(document).ready(function(){
+			//vd1.1 (first) va 1.2 (last) tac dong len ptu o dau va cuoi ng dc chon
+           // $('li').first().css({"border-color":'blue'});
+            //$('li').last().css({"border-color":'blue'});
+            //vd2 eq tra ra ptu cu the 
+            $('li').eq(2).css({"border-color":'red'});
+            //vd3 filter goi ra ptu co tham so vd nhu id ,class 
+            $('li').filter('.test').css({"border-color":'green'});
+            //vd4 nguoc filter . goi ra cac phan tu k co tham so vd nhu id , class 
+            $('li').not('.test').css({"border-color":'orange'});
+
+		});
+	</script>
+</body>
+</html>
+<!-- Jquery Traversing - Ancestors - cac thanh phan cha, ong
+Jquery Traversing - Descendants - cac thanh phan con truc tiep
+Jquery Traversing - Siblings - cac thanh phan anh em
+Jquery Traversing - Filtering - chi dinh cac thanh phan cu the thong qua moi quan he (chon 1 ong ngau nhien) -->

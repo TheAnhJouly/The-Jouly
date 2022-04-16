@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+		<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Velit, aspernatur!</p>
+
+	<button>Fade In</button>
+	<button>Fade Out</button>
+	<button>Fade To</button>
+	<script>
+		$(document).ready(function(){
+			$('button').eq(0).on('click' , function(){
+				$('p').fadeIn(2000)
+			})
+			$('button').eq(1).on('click' , function(){
+				$('p').fadeOut(2000)
+			})
+			$('button').eq(2).on('click' , function(){
+				$('p').fadeTo(2000 , 0.4)
+			})
+		});
+	</script>
+</body>
+</html>
+
+<!-- 
+fadeIn() Hiển thị Element bằng cách tăng dần độ trong suốt
+
+fadeOut() Ẩn Element bằng cách giảm độ trong suốt về 0, sau đó thiết lập style display là none
+
+fadeTo() Thay đổi độ trong suốt của Element -->
