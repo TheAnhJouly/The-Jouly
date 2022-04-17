@@ -364,7 +364,7 @@ img {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url("../asset/faq-bg.jpg") no-repeat center;
+    background: url("asset/faq-bg.jpg") no-repeat center;
 }
 .box-faq .container{
     z-index: 2;
